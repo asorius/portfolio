@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <video
+      playsinline
+      autoplay
+      muted
+      loop
+      poster="./assets/pankaj-patel-561360-unsplash.jpg"
+      id="bgvid"
+    >
+      <source
+        src="./assets/Blurred Video of Scripts Being Typed.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="sticky-nav hide">
+      <nav>
+        <a href="#skills">Skill set </a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">About me / Contacts</a>
+      </nav>
+    </div>
+    <header>
+      <div class="header-container">
+        <h1>Arturas (Arthur) Sorius</h1>
+        <nav>
+          <a href="#skills">Skill set </a>
+          <a href="#projects">Projects</a>
+          <a href="#contacts">About me / Contacts</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="skills">
+        <h2>Skill set</h2>
+        <div class="skills_container">
+          <article class="front ">
+            <h3>Front-End :</h3>
+            <ul>
+              <li>CSS3</li>
+              <li>LESS</li>
+              <li>HTML5</li>
+              <li>JavaScript</li>
+              <li>React/Redux</li>
+            </ul>
+          </article>
+          <article class="back">
+            <h3>Back-End :</h3>
+            <ul>
+              <li>NodeJS</li>
+              <li>MongoDB</li>
+            </ul>
+          </article>
+          <article class="edu">
+            <h3>Education :</h3>
+            <p>
+              Bachelors degree in Civil Engineering (Kaunas University of
+              Technology , 2015)
+            </p>
+          </article>
+          <article class="misc">
+            <h3>Misc. :</h3>
+            <ul>
+              <li>Github</li>
+              <li>Linux CLI</li>
+              <li>Agile methods <span>*In progress</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects_container">
+          <article class="dc">
+            <h3>Debt Collector</h3>
+            <div class="gif-container-dc"></div>
+            <div class="details">
+              <a
+                href="https://dcapp33.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt fa-lg"></i
+              ></a>
+              <a
+                href="http://https://github.com/asorius/reactDC"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+              <p>
+                CRUD type web app made using MERN stack. Hosted on HerokuApps.
+              </p>
+            </div>
+          </article>
+          <article class="weather">
+            <h3>Weather Web App</h3>
+            <div class="gif-container-w"></div>
+            <div class="details">
+              <a
+                href="https://asorius.github.io/WeatherApp/#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt fa-lg"></i
+              ></a>
+              <a
+                href="https://github.com/asorius/WeatherApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+              <p>
+                Weather web app made in React/Redux connected to OpenWeatherMap
+                API, hosted on GitPages
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="contacts">
+        <h2>About Me</h2>
+        <div class="about">
+          <p>
+            I always had a thought of learning to code since school, however,
+            coding wasn't a particularly established in my school, therefore , I
+            didn't consider it too seriously. Until recently. Now I'm driven to
+            become a web developer more than anything.
+          </p>
+        </div>
+        <div class="contact-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><i class="fab fa-linkedin fa-2x"></i
+          ></a>
+          <a
+            href="https://github.com/asorius"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <a
+            href="mailto:arturas.sorius@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="far fa-envelope-open fa-2x"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
