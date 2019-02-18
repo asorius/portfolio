@@ -220,29 +220,36 @@ header {
   display: none;
   top: 0;
   padding: 0;
-  margin: 0;
+  background-color: #242424;
+  border-bottom: 2px solid #ff0000c5;
 }
 .sticky-nav nav {
-  width: 50%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .sticky-nav nav a {
-  width: 33%;
-  margin: 0 auto;
-  overflow: hidden;
-  background: linear-gradient(to right, #ff0000c5 0%, #ff0000c5 5px, transparent 5px);
+  padding: 1rem;
+  background: linear-gradient(to bottom, #ff0000c5 0%, #ff0000c5 0px);
   background-repeat: repeat-x;
-  background-size: 100%;
+  background-position: 0 100%;
+  background-size: 0px 0px;
   color: #b6b0b0;
-  padding-left: 10px;
   text-decoration: none;
+  transition: background-size 0.2s;
 }
 .sticky-nav nav a:hover {
-  background: linear-gradient(to right, #ff0000c5 0%, #ff0000c5 5px, transparent);
+  color: white;
+  background-size: 1px 100%;
+}
+@media screen and (max-width: 765px) {
+  .sticky-nav nav {
+    width: 100%;
+  }
 }
 body {
   position: relative;
