@@ -367,11 +367,14 @@ main {
   padding: 1rem;
   height: 40%;
 }
+#projects .projects_container article .fa-github:hover {
+  color: #f7f8f9;
+}
 #projects .projects_container article .fa-external-link-alt {
   color: teal;
 }
 #projects .projects_container article .fa-external-link-alt:hover {
-  color: #ff0000c5;
+  color: #f7f8f9;
 }
 #projects .projects_container article h3 {
   color: #ffffff;
