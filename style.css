@@ -292,6 +292,7 @@ main {
   padding-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid white;
+  box-shadow: 0px 6px 3px -4px rgba(255, 255, 255, 0.75);
 }
 #skills .skills_container {
   display: flex;
@@ -318,15 +319,19 @@ main {
   padding: 0.5rem;
 }
 #projects {
+  background: #cb2d3e;
+  background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
+  background: linear-gradient(to right, #ef473a, #cb2d3e);
   min-height: 100vh;
   text-align: center;
   width: 100%;
-  background-color: #cfcece;
+  color: #f7f8f9;
   border-bottom: 1px solid #b6b0b0;
 }
 #projects h2,
 #contacts h2 {
   border-color: black;
+  box-shadow: 0px 6px 3px -4px rgba(0, 0, 0, 0.75);
   margin: 0 auto;
 }
 #projects .projects_container {
@@ -369,7 +374,7 @@ main {
   color: #ff0000c5;
 }
 #projects .projects_container article h3 {
-  color: #f90303;
+  color: #ffffff;
   font-size: 1.2rem;
   padding: 1rem;
   width: 50%;
