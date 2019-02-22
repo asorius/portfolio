@@ -143,7 +143,7 @@ header {
   height: 40%;
   width: 50%;
 }
-.header-container h1 {
+.header-container .title {
   color: #dfdfdf;
   font-size: 4rem;
   text-align: center;
@@ -154,15 +154,51 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.header-container .title h1 {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2s;
+}
+.header-container .title::after {
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  position: absolute;
+  animation: block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1.4s;
 }
 .header-container nav {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+}
+.header-container nav::after {
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  position: absolute;
+  animation: block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1.8s;
+}
+.header-container nav .links {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2.2s;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
 }
-.header-container nav a {
+.header-container nav .links a {
   padding: 2rem;
   background: linear-gradient(to bottom, #ff0000c5 0%, #ff0000c5 5px);
   background-repeat: repeat-x;
@@ -172,7 +208,7 @@ header {
   text-decoration: none;
   transition: background-size 0.2s;
 }
-.header-container nav a:hover {
+.header-container nav .links a:hover {
   color: white;
   background-size: 4px 100%;
 }
@@ -189,11 +225,15 @@ header {
     font-size: 3rem;
   }
   .header-container nav {
+    margin: 0;
+    width: 100%;
+  }
+  .header-container nav .links {
     flex-direction: column;
     align-items: baseline;
     text-align: center;
   }
-  .header-container nav a {
+  .header-container nav .links a {
     width: 50%;
     margin: 0 auto;
     background: linear-gradient(to right, #ff0000c5 0%, #ff0000c5 5px, transparent 5px);
@@ -203,7 +243,7 @@ header {
     padding-left: 10px;
     text-decoration: none;
   }
-  .header-container nav a:hover {
+  .header-container nav .links a:hover {
     background: linear-gradient(to right, #ff0000c5 0%, #ff0000c5 5px, transparent);
   }
 }
@@ -211,6 +251,31 @@ header {
   .header-container {
     height: 40%;
     width: 75%;
+  }
+}
+@keyframes block {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .sticky-nav {
@@ -292,7 +357,6 @@ main {
   padding-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid white;
-  box-shadow: 0px 6px 3px -4px rgba(255, 255, 255, 0.75);
 }
 #skills .skills_container {
   display: flex;
@@ -331,7 +395,6 @@ main {
 #projects h2,
 #contacts h2 {
   border-color: black;
-  box-shadow: 0px 6px 3px -4px rgba(0, 0, 0, 0.75);
   margin: 0 auto;
 }
 #projects .projects_container {

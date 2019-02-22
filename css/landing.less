@@ -12,11 +12,10 @@ header {
   height: 40%;
   width: 50%;
 
-  h1 {
+  .title {
     color: #dfdfdf;
     font-size: 4rem;
     text-align: center;
-
     width: 95%;
     padding: 2rem;
     margin: 0 auto;
@@ -24,34 +23,72 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    h1 {
+      opacity: 0;
+      animation: appear-text 0.0001s linear forwards;
+      animation-delay: 2s;
+    }
+    //ANITMATIONS *******************
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      position: absolute;
+      animation: block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      animation-delay: 1.4s;
+    }
   }
   nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-    a {
-      padding: 2rem;
-      background: linear-gradient(
-        to bottom,
-        @hover-color2 0%,
-        @hover-color2 5px
-      );
-      background-repeat: repeat-x;
-      background-position: 0 100%;
-      background-size: 1px 1px;
-      color: #b6b0b0;
-      text-decoration: none;
-      transition: background-size 0.2s;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      position: absolute;
+      animation: block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      animation-delay: 1.8s;
     }
+    .links {
+      opacity: 0;
+      animation: appear-text 0.0001s linear forwards;
+      animation-delay: 2.2s;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2rem;
+      a {
+        padding: 2rem;
+        background: linear-gradient(
+          to bottom,
+          @hover-color2 0%,
+          @hover-color2 5px
+        );
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        background-size: 1px 1px;
+        color: #b6b0b0;
+        text-decoration: none;
+        transition: background-size 0.2s;
+      }
 
-    a:hover {
-      color: white;
-      background-size: 4px 100%;
+      a:hover {
+        color: white;
+        background-size: 4px 100%;
+      }
     }
   }
 }
+
 @media screen and (max-width: 765px) {
   header {
     align-items: baseline;
@@ -64,32 +101,36 @@ header {
       font-size: 3rem;
     }
     nav {
-      flex-direction: column;
-      align-items: baseline;
-      text-align: center;
-      a {
-        width: 50%;
-        margin: 0 auto;
-        background: linear-gradient(
-          to right,
-          @hover-color2 0%,
-          @hover-color2 5px,
-          transparent 5px
-        );
-        background-repeat: repeat-x;
-        background-size: 100%;
-        color: #b6b0b0;
-        padding-left: 10px;
-        text-decoration: none;
-      }
+      margin: 0;
+      width: 100%;
+      .links {
+        flex-direction: column;
+        align-items: baseline;
+        text-align: center;
+        a {
+          width: 50%;
+          margin: 0 auto;
+          background: linear-gradient(
+            to right,
+            @hover-color2 0%,
+            @hover-color2 5px,
+            transparent 5px
+          );
+          background-repeat: repeat-x;
+          background-size: 100%;
+          color: #b6b0b0;
+          padding-left: 10px;
+          text-decoration: none;
+        }
 
-      a:hover {
-        background: linear-gradient(
-          to right,
-          @hover-color2 0%,
-          @hover-color2 5px,
-          transparent
-        );
+        a:hover {
+          background: linear-gradient(
+            to right,
+            @hover-color2 0%,
+            @hover-color2 5px,
+            transparent
+          );
+        }
       }
     }
   }
@@ -98,5 +139,31 @@ header {
   .header-container {
     height: 40%;
     width: 75%;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
