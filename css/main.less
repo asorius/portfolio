@@ -4,9 +4,6 @@
 body {
   position: relative;
 }
-html {
-  margin-top: 4rem;
-}
 video {
   width: 100%;
   height: 100%;
@@ -19,7 +16,6 @@ video {
 }
 // MAIN PAGE STYLING *********************
 main {
-  background-color: @main-bg-color;
   width: 95%;
   margin: 0 auto;
   border-radius: 5px;
@@ -30,7 +26,7 @@ main {
   border-radius: 5px 5px 0 0;
   height: 100vh;
   text-align: center;
-  background-color: #242424;
+  background-color: @navbar-bg;
   width: 100%;
   color: @soft-white;
   border-bottom: 1px solid @dark-grey;
@@ -74,6 +70,7 @@ main {
   width: 100%;
   color: @soft-white;
   border-bottom: 1px solid @dark-grey;
+  padding-bottom: 2rem;
   h2 {
     &:extend(#skills h2);
     border-color: black;
@@ -118,12 +115,12 @@ main {
         border-radius: 0 0 5px 5px;
       }
       .fa-github:hover {
-        color: @soft-white;
+        color: @hover-color2;
       }
       .fa-external-link-alt {
         color: teal;
         &:hover {
-          color: @soft-white;
+          color: @hover-color2;
         }
       }
       h3 {
@@ -144,9 +141,10 @@ main {
 }
 // CONTACTS / ABOUT ME PAGE STYLING *********************
 #contacts {
+  background-color: @main-bg-color;
   text-align: center;
   height: 100vh;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   h2 {
     &:extend(#projects h2);
@@ -192,8 +190,12 @@ main {
       flex-direction: row;
       align-items: center;
       article {
-        min-width: 25%;
-        min-height: 50%;
+        min-width: 33%;
+        min-height: 25%;
+      }
+      .back {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
       }
       li,
       p {
