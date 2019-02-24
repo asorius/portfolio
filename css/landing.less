@@ -27,7 +27,7 @@ header {
     h1 {
       opacity: 0;
       animation: appear-text 1.1s linear forwards;
-      animation-delay: 2s;
+      animation-delay: 1.2s;
     }
     //ANITMATIONS *******************
     &::after {
@@ -39,7 +39,7 @@ header {
       background: #000;
       position: absolute;
       animation: block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-      animation-delay: 1.4s;
+      animation-delay: 0.6s;
     }
   }
   nav {
@@ -55,12 +55,12 @@ header {
       background: @hover-color2;
       position: absolute;
       animation: block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-      animation-delay: 1.8s;
+      animation-delay: 1s;
     }
     .links {
       opacity: 0;
       animation: appear-text 1.1s linear forwards;
-      animation-delay: 2.2s;
+      animation-delay: 1.2s;
       .flex-centered-atDirection(row);
       padding-top: 2rem;
       a {
@@ -90,11 +90,6 @@ header {
   }
 }
 
-@media screen and (max-height: 450px) {
-  header {
-    color: yellow;
-  }
-}
 //FOR NARROWER THAN 765PX WINDOWS
 @media screen and (max-width: 765px) {
   header {
