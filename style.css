@@ -519,9 +519,34 @@ header {
 }
 @media screen and (min-width: 765px) {
   #projects .projects_container {
-    height: 35%;
-    width: 60%;
-    margin: 1rem auto;
+    width: 100%;
+  }
+  #projects .projects_container .gif-container-dc,
+  #projects .projects_container .gif-container-w {
+    height: 15rem;
+    width: 15rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #projects .projects_container {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  #projects .projects_container article {
+    width: 90%;
+  }
+  #projects .projects_container article .single-project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: stretch;
+  }
+  #projects .projects_container article .single-project-container .details {
+    width: 30%;
+    height: 15rem;
+    text-align: center;
+    background: rgba(168, 168, 168, 0.342);
   }
   #projects .projects_container .gif-container-dc,
   #projects .projects_container .gif-container-w {
