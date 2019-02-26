@@ -1,16 +1,73 @@
 .sticky-nav {
-  width: 100%;
+  width: 10%;
   height: 100%;
-  position: sticky;
+  position: fixed;
   display: none;
   top: 0;
+  left: 0;
   padding: 0;
-  background-color: @navbar-bg;
   border-bottom: 2px solid @hover-color2;
   z-index: 1000;
-  nav {
-    width: 75%;
+  .vertical {
+    background: transparent;
+    height: 100vh;
     display: flex;
+    text-align: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .a-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .line {
+      width: 1px;
+      background: red;
+      height: 100%;
+    }
+    a {
+      height: 10rem;
+      width: 50%;
+      text-align: center;
+
+      i {
+        width: 100%;
+        height: 100%;
+        color: red;
+        text-align: center;
+      }
+      margin: 0 auto;
+      .flex-centered-atDirection(row);
+      background: linear-gradient(
+        to bottom,
+        @hover-color2 0%,
+        @hover-color2 0px
+      );
+      background-repeat: repeat-x;
+      background-position: 0 100%;
+      background-size: 0px 0px;
+      color: #b6b0b0;
+      text-decoration: none;
+      transition: background-size 0.2s;
+    }
+
+    a:hover {
+      i {
+        color: white;
+      }
+      background-size: 1px 100%;
+    }
+  }
+
+  .horizontal {
+    width: 75%;
+    display: none;
     flex-direction: row;
     text-align: center;
     justify-content: center;
@@ -40,9 +97,18 @@
     }
   }
 }
+//mobile view
 @media screen and (max-width: 765px) {
   .sticky-nav {
-    nav {
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    background-color: @navbar-bg;
+    .vertical {
+      display: none;
+    }
+    .horizontal {
+      display: flex;
       width: 100%;
       a {
         height: 4rem;
