@@ -20,48 +20,43 @@
     margin: 0 auto;
     .a-container {
       width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2rem;
+      padding: 2rem 0;
     }
     .line {
       width: 1px;
-      background: red;
+      background: @hover-color2;
       height: 100%;
     }
     a {
-      height: 10rem;
-      width: 50%;
       text-align: center;
-
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto;
+      border-radius: 100%;
       i {
         width: 100%;
-        height: 100%;
-        color: red;
-        text-align: center;
+        color: @hover-color2;
+        display: block;
       }
-      margin: 0 auto;
       .flex-centered-atDirection(row);
-      background: linear-gradient(
-        to bottom,
-        @hover-color2 0%,
-        @hover-color2 0px
-      );
-      background-repeat: repeat-x;
-      background-position: 0 100%;
-      background-size: 0px 0px;
+      background: transparent;
+      background-size: 0%;
       color: #b6b0b0;
       text-decoration: none;
-      transition: background-size 0.2s;
+      transition: background-size 2s, transform 0.5s;
     }
 
     a:hover {
       i {
         color: white;
       }
-      background-size: 1px 100%;
+      background-size: 100%;
+      transform: scale(1.2);
     }
   }
 
@@ -81,19 +76,17 @@
       background: linear-gradient(
         to bottom,
         @hover-color2 0%,
-        @hover-color2 0px
+        @hover-color2 5px
       );
       background-repeat: repeat-x;
-      background-position: 0 100%;
-      background-size: 0px 0px;
       color: #b6b0b0;
       text-decoration: none;
-      transition: background-size 0.2s;
+      transition: background-size 0.5s ease-in;
     }
 
     a:hover {
       color: white;
-      background-size: 1px 100%;
+      background-size: 100%;
     }
   }
 }

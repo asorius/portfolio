@@ -1,3 +1,40 @@
+// to reduce  number of events called on scroll
+function reduce(func, wait = 10, immediate = true) {
+  let timeout;
+  return function() {
+    let context = this,
+      args = arguments;
+    let later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+const slideItems = document.querySelectorAll('.projects_container');
+let checkSlide = e => {
+  slideItems.forEach(item => {
+    const slideInAt =
+        window.scrollY + window.innerHeight - item.offsetHeight / 2,
+      itemBottom = item.offsetTop + item.offsetHeight,
+      isHalfShown = slideInAt > item.offsetTop,
+      isNotScrolledPast = window.scrollY < itemBottom - 15;
+
+    if (isHalfShown && isNotScrolledPast) {
+      document.querySelector('.dc').classList.add('activeSlide');
+      document.querySelector('.weather').classList.add('activeSlide');
+    } else {
+      document.querySelector('.dc').classList.remove('activeSlide');
+      document.querySelector('.weather').classList.remove('activeSlide');
+    }
+  });
+};
+window.addEventListener('scroll', reduce(checkSlide));
+
 (function($) {
   $(document).ready(function() {
     const initialWidth = window.innerWidth;
