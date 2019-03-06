@@ -50,7 +50,7 @@ let checkSlide = e => {
 };
 window.addEventListener('scroll', reduce(checkSlide));
 window.addEventListener('scroll', reduce(checkPulse));
-
+//sticky nav appearence after scrolling half a screen
 (function($) {
   $(document).ready(function() {
     const initialWidth = window.innerWidth;
