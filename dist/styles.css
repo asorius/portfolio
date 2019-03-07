@@ -145,7 +145,7 @@ header {
 }
 .header-container .title {
   color: #dfdfdf;
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
   width: 95%;
   padding: 2rem;
@@ -160,6 +160,7 @@ header {
   opacity: 0;
   animation: appear-text 1.1s linear forwards;
   animation-delay: 1.2s;
+  font-family: 'Poiret One', cursive;
 }
 .header-container .title::after {
   content: '';
@@ -229,7 +230,7 @@ header {
     width: 100%;
   }
   .header-container h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .header-container nav {
     margin: 0;
@@ -607,7 +608,7 @@ header {
 }
 #projects .projects_container article h3 {
   color: black;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Poiret One', cursive;
   font-size: 2rem;
   width: 55%;
   margin: 0 auto;
