@@ -14,9 +14,9 @@ function reduce(func, wait = 10, immediate = true) {
     if (callNow) func.apply(context, args);
   };
 }
-let checkPulse = e => {
+let checkCrossSlide = e => {
   const item = document.querySelector('.skills_container');
-  const slideInAt = window.scrollY + window.innerHeight - item.offsetHeight / 2,
+  const slideInAt = window.scrollY + window.innerHeight - item.offsetHeight / 4,
     itemBottom = item.offsetTop + item.offsetHeight,
     isHalfShown = slideInAt > item.offsetTop,
     isNotScrolledPast = window.scrollY < itemBottom - 100;
@@ -34,7 +34,7 @@ const slideItems = document.querySelectorAll('.projects_container');
 let checkSlide = e => {
   slideItems.forEach(item => {
     const slideInAt =
-        window.scrollY + window.innerHeight - item.offsetHeight / 2,
+        window.scrollY + window.innerHeight - item.offsetHeight / 4,
       itemBottom = item.offsetTop + item.offsetHeight,
       isHalfShown = slideInAt > item.offsetTop,
       isNotScrolledPast = window.scrollY < itemBottom - 100;
@@ -49,7 +49,7 @@ let checkSlide = e => {
   });
 };
 window.addEventListener('scroll', reduce(checkSlide));
-window.addEventListener('scroll', reduce(checkPulse));
+window.addEventListener('scroll', reduce(checkCrossSlide));
 //sticky nav appearence after scrolling half a screen
 (function($) {
   $(document).ready(function() {
