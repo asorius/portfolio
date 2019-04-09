@@ -156,11 +156,16 @@ header {
   align-items: center;
   position: relative;
 }
-.header-container .title h1 {
+.header-container .title h1,
+.header-container .title h2 {
   opacity: 0;
   animation: appear-text 1.1s linear forwards;
   animation-delay: 1.2s;
   font-family: 'Poiret One', cursive;
+}
+.header-container .title h2 {
+  font-size: 1.8rem;
+  padding-top: 2rem;
 }
 .header-container .title::after {
   content: '';
@@ -388,8 +393,7 @@ header {
     position: sticky;
     width: 100%;
     height: 100%;
-    background-color: #242424;
-    border-bottom: 2px solid #ff0000c5;
+    background: #00000069;
   }
   .sticky-nav .vertical {
     display: none;
@@ -397,9 +401,10 @@ header {
   .sticky-nav .horizontal {
     display: flex;
     width: 100%;
+    background: transparent;
   }
   .sticky-nav .horizontal a {
-    background: #242424;
+    background: transparent;
   }
   .sticky-nav .horizontal a i {
     color: #f7f8f9;
@@ -413,7 +418,7 @@ header {
   border-radius: 5px 5px 0 0;
   height: 100vh;
   text-align: center;
-  background-color: #242424;
+  background-color: #242424ad;
   width: 100%;
   color: #f7f8f9;
   border-bottom: 1px solid #b6b0b0;
@@ -586,7 +591,7 @@ header {
   opacity: 0;
   padding: 1rem;
   height: 40%;
-  width: 75%;
+  width: 95%;
   background: #f7f8f9;
   color: black;
 }
@@ -783,7 +788,8 @@ main {
 .fa-linkedin {
   color: #006eff;
 }
-.fa-envelope-open {
+.fa-envelope-open,
+.fa-link {
   color: teal;
 }
 @media screen and (min-width: 765px) {
