@@ -165,7 +165,9 @@ header {
 }
 .header-container .title h2 {
   font-size: 1.8rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid whitesmoke;
 }
 .header-container .title::after {
   content: '';
