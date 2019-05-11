@@ -590,12 +590,13 @@ header {
   padding: 1rem;
 }
 #projects .projects_container article .details {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   border: 1px solid #b6b0b0;
   border-radius: 5px;
   width: 40%;
-  font-style: italic;
-  font-weight: 100;
-  background: #fffefe57;
+  background-color: #fffefe57;
   margin: 1rem;
 }
 #projects .projects_container article .details-text {
@@ -608,11 +609,6 @@ header {
 #projects .projects_container .project {
   position: relative;
   margin-bottom: 1rem;
-}
-#projects .projects_container .details {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 #projects .projects_container .dc {
   transition: all 0.6s;
@@ -644,11 +640,11 @@ header {
   align-items: center;
 }
 #projects .projects_container .expand-icon .fas {
-  color: rgba(0, 0, 0, 0.432);
+  color: rgba(0, 0, 0, 0.575);
   transition: all 0.8s;
 }
 #projects .projects_container .expand-icon .fas:hover {
-  color: rgba(0, 0, 0, 0.767);
+  color: #ff0000c5;
 }
 #projects .projects_container .more {
   border-radius: 5px;
@@ -688,49 +684,28 @@ header {
     border: none;
   }
   #projects .projects_container {
-    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 99%);
     width: 100%;
     padding: 0;
   }
-  #projects .projects_container .gif-container-dc,
-  #projects .projects_container .gif-container-w {
-    height: 15rem;
-    width: 15rem;
-  }
   #projects .projects_container article {
     width: 100%;
-  }
-  #projects .projects_container article .details {
-    height: 10rem;
-  }
-  #projects .projects_container article:first-child {
-    border-radius: 0;
-  }
-  #projects .projects_container article:last-child {
-    border-radius: 0;
-  }
-  #projects .projects_container article h3 {
-    width: 35%;
-  }
-  #projects .projects_container article .details {
-    width: 50%;
-    margin: 1rem auto;
   }
 }
 @media screen and (min-width: 1200px) {
   #projects .projects_container {
-    clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 98%);
+    display: flex;
     width: 100%;
     margin: 0 auto;
     height: 100%;
   }
-  #projects .projects_container article {
-    height: 100%;
+  #projects .projects_container .project {
+    width: 50%;
+    height: 40vh;
   }
-  #projects .gif-container-dc,
-  #projects .gif-container-w {
-    height: 15rem;
-    width: 25rem;
+  #projects .projects_container article .details {
+    border: none;
+    background-color: transparent;
+    width: 40%;
   }
 }
 #contacts {

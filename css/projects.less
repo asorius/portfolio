@@ -52,12 +52,13 @@
         padding: 1rem;
       }
       .details {
+        position: absolute;
+        bottom: 0;
+        right: 0;
         border: 1px solid @dark-grey;
         border-radius: 5px;
         width: 40%;
-        font-style: italic;
-        font-weight: 100;
-        background: #fffefe57;
+        background-color: #fffefe57;
         margin: 1rem;
         &-text {
           color: black;
@@ -73,11 +74,7 @@
       position: relative;
       margin-bottom: 1rem;
     }
-    .details {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
+
     .dc {
       transition: all 0.6s;
       background: url('../assets/theone.png');
@@ -107,11 +104,11 @@
       justify-content: center;
       align-items: center;
       .fas {
-        color: rgba(0, 0, 0, 0.432);
+        color: rgba(0, 0, 0, 0.575);
         transition: all 0.8s;
 
         &:hover {
-          color: rgba(0, 0, 0, 0.767);
+          color: @hover-color2;
         }
       }
     }
@@ -156,32 +153,10 @@
       border: none;
     }
     .projects_container {
-      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 99%);
       width: 100%;
       padding: 0;
-      .gif-container-dc,
-      .gif-container-w {
-        height: 15rem;
-        width: 15rem;
-      }
       article {
         width: 100%;
-        .details {
-          height: 10rem;
-        }
-        &:first-child {
-          border-radius: 0;
-        }
-        &:last-child {
-          border-radius: 0;
-        }
-        h3 {
-          width: 35%;
-        }
-        .details {
-          width: 50%;
-          margin: 1rem auto;
-        }
       }
     }
   }
@@ -190,38 +165,19 @@
 @media screen and (min-width: 1200px) {
   #projects {
     .projects_container {
-      clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 98%);
+      display: flex;
       width: 100%;
       margin: 0 auto;
       height: 100%;
-      article {
-        height: 100%;
-        // .single-project-container {
-        //   width: 80%;
-        //   margin: 0 auto;
-        //   .flex-centered-atDirection(row);
-        //   .details {
-        //     padding: 0;
-        //     width: 40%;
-        //     height: 10rem;
-        //     text-align: center;
-        //     .flex-centered-atDirection(row);
-        //     &-text {
-        //       width: 75%;
-        //     }
-        //     &-icons {
-        //       width: 25%;
-        //       height: 100%;
-        //       .flex-centered-atDirection(column);
-        //     }
-        //   }
-        // }
+      .project {
+        width: 50%;
+        height: 40vh;
       }
-    }
-    .gif-container-dc,
-    .gif-container-w {
-      height: 15rem;
-      width: 25rem;
+      article .details {
+        border: none;
+        background-color: transparent;
+        width: 40%;
+      }
     }
   }
 }
