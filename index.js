@@ -42,9 +42,11 @@ let checkSlide = e => {
     if (isHalfShown && isNotScrolledPast) {
       document.querySelector('.dc').classList.add('activeSlide');
       document.querySelector('.weather').classList.add('activeSlide');
+      document.querySelector('.auto').classList.add('activeSlide');
     } else {
       document.querySelector('.dc').classList.remove('activeSlide');
       document.querySelector('.weather').classList.remove('activeSlide');
+      document.querySelector('.auto').classList.remove('activeSlide');
     }
   });
 };
@@ -65,3 +67,25 @@ window.addEventListener('scroll', reduce(checkCrossSlide));
     });
   });
 })(jQuery);
+document.querySelectorAll('.fa-info-circle').forEach(el => {
+  el.addEventListener('click', e => {
+    const parent = e.target.parentElement.parentElement;
+    const moreEl = parent.querySelector('.more');
+    if (moreEl.classList.contains('activeSlide')) {
+      moreEl.classList.remove('activeSlide');
+    } else {
+      el.classList.add('hidden');
+      moreEl.classList.add('activeSlide');
+    }
+  });
+});
+document.querySelectorAll('.more').forEach(el => {
+  el.addEventListener('click', e => {
+    const parent = e.target.parentElement;
+    const icon = parent.querySelector('.fa-info-circle');
+    if (e.target.classList.contains('activeSlide')) {
+      e.target.classList.remove('activeSlide');
+      icon.classList.remove('hidden');
+    }
+  });
+});

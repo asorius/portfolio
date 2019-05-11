@@ -531,6 +531,9 @@ header {
     height: 25rem;
   }
 }
+.hidden {
+  display: none;
+}
 #projects {
   background: #cb2d3e;
   background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
@@ -558,51 +561,15 @@ header {
   height: 100%;
   margin-top: 1rem;
 }
-#projects .projects_container .gif-container-dc {
-  background-image: url('../assets/Webp.net-gifmaker2.gif');
-  background-size: cover;
-  background-position: center;
-  height: 8rem;
-  width: 50%;
-  margin: 0 auto;
-  padding-bottom: 0.5rem;
-  text-align: center center;
-}
-#projects .projects_container .gif-container-w {
-  background-image: url('../assets/wapp.gif');
-  background-size: cover;
-  background-position: center center;
-  height: 8rem;
-  width: 50%;
-  margin: 0 auto;
-  padding-bottom: 0.5rem;
-  text-align: center;
-}
-#projects .projects_container .activeSlide {
-  transform: translateX(0);
-  opacity: 1;
-}
-#projects .projects_container .dc {
-  transition: all 0.6s;
-}
-#projects .projects_container .weather {
-  transition: all 0.7s;
-}
 #projects .projects_container article {
   transform: translateX(-100vw);
   opacity: 0;
   padding: 1rem;
-  height: 40%;
+  height: 100%;
   width: 95%;
   background: #f7f8f9;
   color: black;
-}
-#projects .projects_container article:first-child {
-  border-bottom: 1px solid black;
-  border-radius: 5px 5px 0 0;
-}
-#projects .projects_container article:last-child {
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
 }
 #projects .projects_container article .fa-github:hover {
   color: #ff0000c5;
@@ -614,7 +581,6 @@ header {
   color: #ff0000c5;
 }
 #projects .projects_container article h3 {
-  color: black;
   font-family: 'Poiret One', cursive;
   font-size: 2rem;
   width: 55%;
@@ -624,11 +590,13 @@ header {
   padding: 1rem;
 }
 #projects .projects_container article .details {
-  border: 2px solid #e7e5e5;
+  border: 1px solid #b6b0b0;
   border-radius: 5px;
+  width: 40%;
   font-style: italic;
   font-weight: 100;
-  margin-top: 1rem;
+  background: #fffefe57;
+  margin: 1rem;
 }
 #projects .projects_container article .details-text {
   color: black;
@@ -636,7 +604,80 @@ header {
 }
 #projects .projects_container article .details-icons {
   padding: 0.5rem;
-  background: #e7e5e5;
+}
+#projects .projects_container .project {
+  position: relative;
+  margin-bottom: 1rem;
+}
+#projects .projects_container .details {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#projects .projects_container .dc {
+  transition: all 0.6s;
+  background: url('../assets/theone.png');
+  background-size: cover;
+  background-position: center bottom;
+  height: 90vh;
+}
+#projects .projects_container .weather {
+  transition: all 0.7s;
+  background: url('../assets/thethree.png');
+  background-size: cover;
+  background-position: center bottom;
+  height: 90vh;
+}
+#projects .projects_container .auto {
+  background: url('../assets/thetwo.png');
+  background-size: cover;
+  background-position: center bottom;
+  height: 90vh;
+  transition: all 0.8s;
+}
+#projects .projects_container .expand-icon {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projects .projects_container .expand-icon .fas {
+  color: rgba(0, 0, 0, 0.432);
+  transition: all 0.8s;
+}
+#projects .projects_container .expand-icon .fas:hover {
+  color: rgba(0, 0, 0, 0.767);
+}
+#projects .projects_container .more {
+  border-radius: 5px;
+  transform: translateX(-100vw);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.89);
+  transition: all 0.5s;
+  color: white;
+}
+#projects .projects_container .more h4 {
+  color: teal;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+#projects .projects_container .more li {
+  padding: 0.2rem;
+}
+#projects .projects_container .more p {
+  width: 90%;
+  margin: 0 auto;
+}
+#projects .projects_container .activeSlide {
+  transform: translateX(0);
+  opacity: 1;
 }
 @media screen and (min-width: 765px) {
   #projects {
@@ -683,34 +724,8 @@ header {
     margin: 0 auto;
     height: 100%;
   }
-  #projects .projects_container article .single-project-container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  #projects .projects_container article .single-project-container .details {
-    padding: 0;
-    width: 40%;
-    height: 10rem;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  #projects .projects_container article .single-project-container .details-text {
-    width: 75%;
-  }
-  #projects .projects_container article .single-project-container .details-icons {
-    width: 25%;
+  #projects .projects_container article {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   #projects .gif-container-dc,
   #projects .gif-container-w {
