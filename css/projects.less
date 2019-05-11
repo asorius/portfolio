@@ -145,7 +145,7 @@
 }
 
 //FOR WIDER THAN 765PX WINDOWS
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 1024px) {
   #projects {
     padding-top: 0;
 
@@ -154,15 +154,22 @@
     }
     .projects_container {
       width: 100%;
-      padding: 0;
-      article {
-        width: 100%;
+      padding: 1rem;
+      height: 100%;
+      .project {
+        width: 75%;
+        height: 65vh;
+      }
+      article .details {
+        border: none;
+        background-color: transparent;
+        width: 40%;
       }
     }
   }
 }
-//FOR WIDER THAN 1200PX WINDOWS
-@media screen and (min-width: 1200px) {
+//FOR WIDER THAN 1350PX WINDOWS
+@media screen and (min-width: 1400px) {
   #projects {
     .projects_container {
       display: flex;

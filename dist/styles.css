@@ -675,7 +675,7 @@ header {
   transform: translateX(0);
   opacity: 1;
 }
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 1024px) {
   #projects {
     padding-top: 0;
   }
@@ -685,13 +685,20 @@ header {
   }
   #projects .projects_container {
     width: 100%;
-    padding: 0;
+    padding: 1rem;
+    height: 100%;
   }
-  #projects .projects_container article {
-    width: 100%;
+  #projects .projects_container .project {
+    width: 75%;
+    height: 65vh;
+  }
+  #projects .projects_container article .details {
+    border: none;
+    background-color: transparent;
+    width: 40%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   #projects .projects_container {
     display: flex;
     width: 100%;
