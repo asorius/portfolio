@@ -72,19 +72,16 @@ document.querySelectorAll('.fa-info-circle').forEach(el => {
     const parent = e.target.parentElement.parentElement;
     const moreEl = parent.querySelector('.more');
     console.log({ moreEl });
-    if (moreEl.classList.contains('fade-in')) {
-      moreEl.classList.remove('fade-in');
-    } else {
-      el.classList.add('hidden');
-      moreEl.classList.add('fade-in');
-    }
+
+    el.classList.add('hidden');
+    moreEl.classList.add('fade-in');
   });
 });
 document.querySelectorAll('.fa-times-circle').forEach(el => {
   el.addEventListener('click', e => {
     const parent = e.target.parentElement.parentElement;
     const icon = parent.parentElement.querySelector('.fa-info-circle');
-    parent.remove('fade-in');
+    parent.classList.remove('fade-in');
     icon.classList.remove('hidden');
   });
 });
