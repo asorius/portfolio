@@ -71,21 +71,20 @@ document.querySelectorAll('.fa-info-circle').forEach(el => {
   el.addEventListener('click', e => {
     const parent = e.target.parentElement.parentElement;
     const moreEl = parent.querySelector('.more');
-    if (moreEl.classList.contains('activeSlide')) {
-      moreEl.classList.remove('activeSlide');
+    console.log({ moreEl });
+    if (moreEl.classList.contains('fade-in')) {
+      moreEl.classList.remove('fade-in');
     } else {
       el.classList.add('hidden');
-      moreEl.classList.add('activeSlide');
+      moreEl.classList.add('fade-in');
     }
   });
 });
-document.querySelectorAll('.more').forEach(el => {
+document.querySelectorAll('.fa-times-circle').forEach(el => {
   el.addEventListener('click', e => {
-    const parent = e.target.parentElement;
-    const icon = parent.querySelector('.fa-info-circle');
-    if (e.target.classList.contains('activeSlide')) {
-      e.target.classList.remove('activeSlide');
-      icon.classList.remove('hidden');
-    }
+    const parent = e.target.parentElement.parentElement;
+    const icon = parent.parentElement.querySelector('.fa-info-circle');
+    parent.remove('fade-in');
+    icon.classList.remove('hidden');
   });
 });
