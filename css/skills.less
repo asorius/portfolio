@@ -81,9 +81,7 @@
     .skills_container {
       width: 90%;
       padding-top: 2rem;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
+
       article {
         width: 17rem;
         height: 17rem;
@@ -96,10 +94,12 @@
     }
   }
 }
-//FOR WIDER THAN 1200PX WINDOWS
-@media screen and (min-width: 1200px) {
+//FOR WIDER THAN 1024PX WINDOWS
+@media screen and (min-width: 1024px) {
   #skills {
     .skills_container {
+      min-height: 90vh;
+      .flex-centered-atDirection(row);
       article {
         width: 20em;
         height: 20rem;
@@ -107,13 +107,15 @@
     }
   }
 }
-//FOR WIDER THAN 1200PX WINDOWS
-@media screen and (min-width: 1600px) {
+//FOR WIDER THAN 1400PX WINDOWS
+@media screen and (min-width: 1400px) {
   #skills {
     .skills_container {
+      padding-top: 0;
+
       article {
-        width: 25em;
-        height: 25rem;
+        width: 30em;
+        height: 30rem;
       }
     }
   }

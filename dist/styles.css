@@ -505,9 +505,6 @@ header {
   #skills .skills_container {
     width: 90%;
     padding-top: 2rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
   }
   #skills .skills_container article {
     width: 17rem;
@@ -519,16 +516,26 @@ header {
     display: block;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  #skills .skills_container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   #skills .skills_container article {
     width: 20em;
     height: 20rem;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1400px) {
+  #skills .skills_container {
+    padding-top: 0;
+  }
   #skills .skills_container article {
-    width: 25em;
-    height: 25rem;
+    width: 30em;
+    height: 30rem;
   }
 }
 .hidden {
@@ -609,6 +616,9 @@ header {
 #projects .projects_container .project {
   position: relative;
   margin-bottom: 1rem;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 #projects .projects_container .dc {
   transition: all 0.6s;
