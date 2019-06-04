@@ -77,28 +77,37 @@
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+      &::after{
+        content:'';
+        display:block;
+        height:1px;
+        width:50%;
+        margin:1.5rem auto;
+        border-bottom:1px dotted white;
+      }
+      &:last-child::after{
+        display:none;
+      }
     }
-
-    .dc {
-      transition: all 0.6s;
-      background: @project-img-overlay, url('../assets/theone.png');
+    .img-pos{
       background-size: cover;
       background-position: center bottom;
       height: 90vh;
+    }
+    .dc {
+      transition: all 0.6s;
+      background: @project-img-overlay, url('../assets/theone.png');
+      .img-pos
     }
     .weather {
       transition: all 0.7s;
       background: @project-img-overlay, url('../assets/thethree.png');
-      background-size: cover;
-      background-position: center bottom;
-      height: 90vh;
+      .img-pos
     }
     .auto {
       background: @project-img-overlay, url('../assets/thetwo.png');
-      background-size: cover;
-      background-position: center bottom;
-      height: 90vh;
       transition: all 0.8s;
+      .img-pos
     }
     .expand-icon {
       height: 100%;
