@@ -36,7 +36,7 @@
       background-color: #1f1f1fbb;
       h3 {
         color: @heading-color;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         padding-bottom: 0.5rem;
       }
     }
@@ -68,6 +68,7 @@
       padding: 0.5rem;
     }
     li {
+      min-height: 2.5rem;
       transition: all 0.8s;
       &:hover {
         cursor: context-menu;
@@ -116,6 +117,12 @@
         border-radius: 0;
         box-shadow: none;
         margin: 0;
+      }
+      .front {
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+      }
+      .back {
+        clip-path: polygon(100% 2%, 0 0, 0 100%, 100% 100%);
       }
     }
   }

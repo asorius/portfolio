@@ -476,7 +476,7 @@ header {
 }
 #skills .skills_container .list-container h3 {
   color: #da0404;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   padding-bottom: 0.5rem;
 }
 #skills .skills_container .front {
@@ -507,6 +507,7 @@ header {
   padding: 0.5rem;
 }
 #skills .skills_container li {
+  min-height: 2.5rem;
   transition: all 0.8s;
 }
 #skills .skills_container li:hover {
@@ -553,6 +554,12 @@ header {
     border-radius: 0;
     box-shadow: none;
     margin: 0;
+  }
+  #skills .skills_container .front {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+  }
+  #skills .skills_container .back {
+    clip-path: polygon(100% 2%, 0 0, 0 100%, 100% 100%);
   }
 }
 .hidden {
