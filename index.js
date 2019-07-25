@@ -43,10 +43,12 @@ let checkSlide = e => {
       document.querySelector('.dc').classList.add('activeSlide');
       document.querySelector('.weather').classList.add('activeSlide');
       document.querySelector('.auto').classList.add('activeSlide');
+      document.querySelector('.clock').classList.add('activeSlide');
     } else {
       document.querySelector('.dc').classList.remove('activeSlide');
       document.querySelector('.weather').classList.remove('activeSlide');
       document.querySelector('.auto').classList.remove('activeSlide');
+      document.querySelector('.clock').classList.remove('activeSlide');
     }
   });
 };

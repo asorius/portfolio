@@ -681,6 +681,13 @@ header {
   background-position: center bottom;
   height: 90vh;
 }
+#projects .projects_container .clock {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../assets/untitled.png');
+  transition: all 0.8s;
+  background-size: cover;
+  background-position: center bottom;
+  height: 90vh;
+}
 #projects .projects_container .expand-icon {
   height: 100%;
   width: 100%;
