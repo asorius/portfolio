@@ -1,22 +1,22 @@
 .hidden {
   display: none;
 }
+
 #projects {
-  background: #cb2d3e;
-  background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
-  background: linear-gradient(to right, #ef473a, #cb2d3e);
+  background: @main-bg-color;
+
   min-height: 100vh;
   text-align: center;
   width: 100%;
-  color: @soft-white;
-  border-bottom: 1px solid @dark-grey;
+  color: black;
   padding-bottom: 2rem;
   padding-top: 40px;
+
   h2 {
     &:extend(#skills h2);
-    border-color: black;
     margin: 0 auto;
   }
+
   .projects_container {
     .flex-centered-atDirection(column);
     justify-content: stretch;
@@ -33,15 +33,19 @@
       background: @main-bg-color;
       color: @font-color-dark;
       border-radius: 5px;
+
       .fa-github:hover {
         color: @hover-color2;
       }
+
       .fa-external-link-alt {
         color: teal;
+
         &:hover {
           color: @hover-color2;
         }
       }
+
       h3 {
         font-family: 'Poiret One', cursive;
         font-size: 2rem;
@@ -52,19 +56,21 @@
         margin-bottom: 1rem;
         padding: 1rem;
       }
+
       .details {
         position: absolute;
         bottom: 0;
         right: 0;
-        border: 1px solid @dark-grey;
         border-radius: 5px;
         width: 40%;
         background: #ffffffc5;
         margin: 1rem;
+
         &-text {
           color: black;
           padding: 1rem;
         }
+
         &-icons {
           padding: 0.5rem;
         }
@@ -77,43 +83,51 @@
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
       &::after {
         content: '';
         display: block;
         height: 1px;
         width: 50%;
         margin: 1.5rem auto;
-        border-bottom: 1px dotted white;
+        border-bottom: 1px dotted black;
       }
+
       &:last-child::after {
         display: none;
       }
     }
+
     .img-pos {
       background-size: cover;
       background-position: center bottom;
       height: 90vh;
     }
+
     .dc {
       transition: all 0.6s;
       background: @project-img-overlay, url('../assets/theone.png');
       .img-pos;
     }
+
     .weather {
       transition: all 0.7s;
       background: @project-img-overlay, url('../assets/thethree.png');
       .img-pos;
     }
+
     .auto {
       background: @project-img-overlay, url('../assets/thetwo.png');
       transition: all 0.8s;
       .img-pos;
     }
+
     .clock {
-      background: @project-img-overlay, url('../assets/untitled.png');
+      background: @project-img-overlay, url('../assets/Untitled.png');
       transition: all 0.8s;
       .img-pos;
     }
+
     .expand-icon {
       height: 100%;
       width: 100%;
@@ -121,11 +135,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       .fa-info-circle {
         color: @soft-white;
         transition: all 0.5s;
       }
     }
+
     .project:hover {
       .fa-info-circle {
         color: @hover-color2;
@@ -133,6 +149,7 @@
         cursor: pointer;
       }
     }
+
     .more {
       border-radius: 5px;
       z-index: -1;
@@ -145,24 +162,29 @@
       transition: all 0.5s;
       color: white;
       background: #000000ea;
+
       h4 {
         color: teal;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
       }
+
       li {
         padding: 0.2rem;
       }
+
       p {
         width: 90%;
         margin: 0 auto;
       }
+
       .close {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
         height: 2rem;
         width: 2rem;
+
         .far {
           color: red;
           transition: all 0.4s;
@@ -174,10 +196,12 @@
         }
       }
     }
+
     .more.fade-in {
       opacity: 1;
       z-index: 1;
     }
+
     .activeSlide {
       transform: translateX(0);
       opacity: 1;
@@ -191,24 +215,28 @@
     padding-top: 0;
 
     h2 {
-      border-color: white;
+      border-color: black;
     }
+
     .projects_container {
       width: 100%;
       padding: 1rem;
       height: 100%;
+
       .project {
         width: 75%;
         height: 65vh;
       }
+
       article .details {
         border: none;
         border-radius: 1rem;
-        width: 5rem;
+        width: 4rem;
       }
     }
   }
 }
+
 //FOR WIDER THAN 1350PX WINDOWS
 @media screen and (min-width: 1400px) {
   #projects {
@@ -217,10 +245,12 @@
       width: 100%;
       margin: 0 auto;
       height: 100%;
+
       .project {
         width: 50%;
         height: 40vh;
       }
+
       article .details {
         border: none;
       }

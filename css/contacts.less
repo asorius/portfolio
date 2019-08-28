@@ -11,28 +11,31 @@
     &:extend(#projects h2);
     padding-bottom: 1rem;
   }
+
   .about {
     .flex-centered-atDirection(column);
     height: 50%;
     width: 90%;
     margin: 0 auto;
   }
+
   .contact-icons {
     height: 20%;
     padding: 1rem;
   }
+
   p {
     line-height: 2rem;
   }
 }
+
 //FOR WIDER THAN 765PX WINDOWS
 @media screen and (min-width: 765px) {
   #contacts {
     padding-top: 0;
 
-    h2 {
-      border-bottom: 1px solid black;
-    }
+    h2 {}
+
     .about {
       width: 75%;
       margin: 0 auto;
