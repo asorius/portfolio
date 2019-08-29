@@ -34,9 +34,9 @@ const slideItems = document.querySelectorAll('.projects_container');
 let checkSlide = e => {
   slideItems.forEach(item => {
     const slideInAt =
-        window.scrollY + window.innerHeight - item.offsetHeight / 4,
+        window.scrollY + window.innerHeight - item.offsetHeight / 5,
       itemBottom = item.offsetTop + item.offsetHeight,
-      isHalfShown = slideInAt > item.offsetTop,
+      isHalfShown = slideInAt > item.offsetTop - 150,
       isNotScrolledPast = window.scrollY < itemBottom - 100;
 
     if (isHalfShown && isNotScrolledPast) {
