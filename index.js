@@ -69,21 +69,20 @@ window.addEventListener('scroll', reduce(checkCrossSlide));
     });
   });
 })(jQuery);
-document.querySelectorAll('.fa-info-circle').forEach(el => {
+document.querySelectorAll('.project').forEach(el => {
   el.addEventListener('click', e => {
-    const parent = e.target.parentElement.parentElement;
-    const moreEl = parent.querySelector('.more');
-    console.log({ moreEl });
-
-    el.classList.add('hidden');
-    moreEl.classList.add('fade-in');
-  });
-});
-document.querySelectorAll('.fa-times-circle').forEach(el => {
-  el.addEventListener('click', e => {
-    const parent = e.target.parentElement.parentElement;
-    const icon = parent.parentElement.querySelector('.fa-info-circle');
-    parent.classList.remove('fade-in');
-    icon.classList.remove('hidden');
+    const icon = el.querySelector('.expand-icon');
+    const moreel = el.querySelector('.more');
+    console.log(icon);
+    if (
+      e.target.classList.contains('fa-times-circle') ||
+      e.target.classList.contains('fade-in')
+    ) {
+      icon.classList.remove('hidden');
+      moreel.classList.remove('fade-in');
+    } else {
+      icon.classList.add('hidden');
+      moreel.classList.add('fade-in');
+    }
   });
 });
