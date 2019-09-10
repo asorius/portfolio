@@ -148,7 +148,8 @@
     .project:hover {
 
       .fa-info-circle {
-        color: @hover-color2;
+        // color: @hover-color2;
+        color: teal
       }
     }
 
@@ -162,8 +163,8 @@
       width: 100%;
       height: 100%;
       transition: all 0.5s;
-      color: #ffffff;
-      background: #000000ea;
+      color: @more-text-color;
+      background: @more-bg;
 
       h4 {
         color: @more-heading-color;
@@ -214,6 +215,10 @@
 //FOR WIDER THAN 765PX WINDOWS
 @media screen and (min-width: 765px) {
   #projects {
+    background: url('../assets/projects.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     .projects_container {
       width: 100%;
@@ -268,9 +273,6 @@
       }
 
       .more {
-        color: #f0f0f0;
-        background: #080808ea;
-
         h4 {
           font-size: 1.1rem;
           margin-bottom: 0.2rem;
@@ -291,6 +293,7 @@
 //FOR WIDER THAN 1350PX WINDOWS
 @media screen and (min-width: 1400px) {
   #projects {
+
     .projects_container {
       .project {
         width: 80%;
