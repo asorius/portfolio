@@ -155,6 +155,7 @@ header {
 }
 .header-container {
   width: 50%;
+  max-width: 50rem;
 }
 .header-container .title {
   color: black;
@@ -281,7 +282,7 @@ header {
   color: white;
   background-size: 4px 100%;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1024px) {
   header {
     background: url('https://images.pexels.com/photos/994883/pexels-photo-994883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     clip-path: none;
@@ -588,8 +589,8 @@ header {
     padding-top: 2rem;
   }
   #skills .skills_container article {
-    width: 20rem;
-    height: 20rem;
+    max-width: 40rem;
+    min-height: 20rem;
   }
   #skills .skills_container li,
   #skills .skills_container p {
